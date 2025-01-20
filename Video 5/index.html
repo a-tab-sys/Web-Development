@@ -1,0 +1,110 @@
+<!-- adding images -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images, Tables, List</title>
+</head>
+<body>
+    <!-- use img tag - type img, then enter-->
+    <!--where is the text you wrote in alt displayed? basically if the imge didnt display for some reason like you put an incorrect name in source it will show then-->
+     <img src="train bhai.png" alt="Train Image">
+     
+     <img src="train bhaii.png" alt="Train Image">
+
+    <!-- image has some attriputes. values are pixels. 23 pixels.if you select width and heigh, you risk distorting the aspect ratio of the image, so if we only select one: either width or height it will pick the other for you automatically so you dont distort anything. you cant chnge in css to but its good to define here for reasons you will learn later
+     
+    you can use style attribute here too if you wanted. style attribute you can use with mostly all tags-->
+    
+    <img width="230" height="230" src="train bhai.png" alt="Train Image">
+    <img width="230" src="train bhai.png" alt="Train Image">
+
+    <!-- br tag adds a line break -->
+
+    <br>
+
+    <!-- in the table tag you have many tags - tr: table rows, th: table heading, td: table data. colspan nd rowspan tells you how many rows/columns each value should take up. its the same concept of merging cells in excel-->
+    <!-- we can add caption to table using caption tag -->
+    <!-- you an add a header and footer and body, no visual change but it just groups things, you dont have to but if you want you can group in head, body and foot-->
+    <!-- in css you give it borders and style -->
+
+
+    <table>
+        <caption>Employee Details</caption>
+
+        <thead>
+            <!-- header content -->
+            <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Fave Lnaguage</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- harry will take 2 rows of space -->
+                <td rowspan="2">Harry</td>
+                <td>Programmer</td>
+                <td>JavaScript</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <!-- footer content -->
+            <tr>
+                <!-- same will take 2 coulums of room bc of colspan-->
+                <td colspan="2">Sam</td>
+                <td>Designer</td>
+                <td>CSS</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <!-- list- we have 3 types: 
+    1. unordered list: just lists them 
+    2. ordered list: provides some sort of numbering 1,2,3 or a,b,c etc
+    3. definition list-->
+
+    <!-- this is unordered list below 
+     you can add some attributes like type - this will change the bullet type to square bullet (there is square, circle and disk(default))-->
+    <ul type="square">
+        <li>Harry</li>
+        <li>Rohan</li>
+        <li>Shubham</li>
+    </ul>
+
+
+
+
+    <!-- this is ordered list below, can add type attribute here too see codewithharry website for all the options and associated ="?"
+     you can do roman numerals, lowercase alphabet, uppercase alphabet, numbers-->
+    <ol>
+        <li>Harry</li>
+        <li>Rohan</li>
+        <li>Shubham</li>
+    </ol>
+
+    <!-- this is definition list below -->
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing.</dd>
+
+        <dt>CSS</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing.</dd>
+
+        <dt>JAVA</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing.</dd>
+
+
+    </dl>
+
+
+
+
+</body>
+</html>
