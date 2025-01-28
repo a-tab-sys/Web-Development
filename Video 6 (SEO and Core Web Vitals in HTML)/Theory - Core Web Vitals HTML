@@ -1,0 +1,23 @@
+SEO- is search engine optimzation
+
+when you look at a website such as amazon, amazon will want to load quickly
+
+google is a search engine, responsible for showing users good pages. google will want to show pages that present information well and that are fast and pages that will give the user a good expiriance.
+
+if 2 sites have information about for example dog food, the second page is fast so google will give preference to that page.
+
+How google ranks pages:
+1. firstly pages with good content is most important
+2. core web vitals are important. Metrics in core web vitals:
+    1. Cumulative Layout Shift (CLS): this is how much the layout of our page changes as it loads (want to minimize this as much as possiible)
+    2. largest contextual paint (LCP) : when a viewer is viewing a page, how long oes the largest element on the page take to load(should be under 2.5 seconds)
+    3. First input delay (FID): this is when a user puts in any sort of input, how long does our page take to respond to that input (should be 100 ms or less)
+
+TOOL
+Lighthouse report - give you feedbck on your site
+when you open ite in browser, right click and select inpect, click light house
+
+if your html file title <title>Document</title> reflects our website content well, google will prefer your site
+
+
+web.dev is good for getting some more information on this type of stuff

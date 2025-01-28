@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Lets learn it</title>
+</head>
+
+<body>
+    <h1>Form to apply for TA position </h1>
+    <!-- see the form tag below -->
+    <form action="post">
+
+        <!-- div puts stuff in boxs, you can do this to organize and seperate things so theyre not all on the same line. you can also use the br tag but harry doesnt like it, he will explain later -->
+        <div>
+            <!-- below are some input types for html forms -  we got these from harrys website-->
+            <label for="username">Enter your username: </label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+
+        <div>
+            <!-- from harry site -->
+            <!-- because male and female radio button have the same name of gender, you can only pick one from them, if you select female, male will unclick vice versa -->
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <!-- the id attribute in input tag needs to be same a what you put in label for="" because then when you click the label it wont select, it will only select if you click the actual radio button. we want it to select if you click the label and/or the radio button-->
+        </div>
+
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+
+
+
+        <!-- if you add label for = "" for any element you have to add the id for the element to be the same text -->
+
+
+
+        <!-- Lets look at text area and selct - all in harrys website -->
+        
+        <!-- The Textarea Element -->
+         <div>
+            <label for="comment">Enter your comment: </label>
+            <textarea id = "comment" name="comment" rows="4" cols="50">Enter your comment here...</textarea>
+         </div>
+
+
+         <!-- The Select Element -->
+         <div>
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+          </select>
+         </div>
+
+            <!-- Lets look at more on forms - all in harrys website-->
+
+
+    </form>
+</body>
+
+</html>
+
+<!-- It is through forms that data is exchanges from client to server -->
+
+<!-- the action field in form can be "get" or "post"
+get - simple request
+post - when we are giving lots of data: used mostly 
+  
+In your form you can have many input tags
+  
+  
+  
+  
+  -->

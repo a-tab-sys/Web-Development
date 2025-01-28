@@ -1,0 +1,11 @@
+ID is a unique idetifier ssigned to one html element
+
+Class atribute lets you give the same name t multiple html elements.
+this way you can easily change their look or behavior all at once
+classes are not unique and can be assigned to multiple elements
+
+id and class are attributes of elements
+
+you can go on any website and find the id of a particular element or section on the page
+then when you type in the website url followed by # then the id when you open that link
+it will open the that are of the page for which you found in element
