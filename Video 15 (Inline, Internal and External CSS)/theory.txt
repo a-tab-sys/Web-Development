@@ -1,0 +1,6 @@
+there are 3 ways to add css to an html page
+
+1. inline css - which is using the style attribute - try to avoid using this
+2. internal css - using style tag - use when your dealing with a simple website that doesnt need alot of designing/styling
+3. external css - using a .css file - use in most cases, definitly use in best practice website
+

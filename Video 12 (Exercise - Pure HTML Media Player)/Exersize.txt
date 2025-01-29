@@ -1,0 +1,7 @@
+this video he gives us a question problem to solve:
+
+you are given 12 files; 6 audio and 6 video.
+design a website using HTML only which shows these 12 files.
+
+1.mp3, 2.mp3 ...... 6.mp3
+1.mp4, 2.mp4 ...... 6.mp4

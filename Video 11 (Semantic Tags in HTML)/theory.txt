@@ -1,0 +1,5 @@
+semantic tags aare important for seo
+
+semantic tags tell browsers and web crawlers what your website is about
+these are not necessary but it really helps search engines understand our website
+this helps our site rank higher
