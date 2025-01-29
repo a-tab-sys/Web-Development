@@ -1,0 +1,18 @@
+to help you isulize fonts: https://codepen.io/web-dot-dev/pen/yLojraG
+
+to help you know color keywords in css: https://codepen.io/web-dot-dev/pen/ZELGraM
+
+to use google fonts
+search google fonts -find the font: for example baloo bhai 2
+to use it click get font. you can use through link or import.
+
+the google fonts site shows you how to use it with import or link method
+
+on google fonts you can select multiple font fmailies and the font sile basically gives you the link and import code for all the font families you seelected
+for instance i got: 
+baloo bhai and poppins
+
+WHEN YOU OPEN IN BROWSER TO VIEW
+go to inspect and look at styles box - youcan change alues with arrow keys temporarily to expiriment how you want the site to look and thenyou can permanantly put it into your code
+
+in that same inspect area you can add different parameters to change like size, color, weight -- > then just copy paste that into your actual code tokeep these changes permanantly

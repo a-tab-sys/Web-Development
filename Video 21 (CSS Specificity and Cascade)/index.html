@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* specificity calculation */
+        /* the specificity of this element selector is 1 */
+        h1 {
+            color: aqua;
+        }
+
+        /* the specificity of this class selector is 10 */
+        .yellow {
+            color: yellow;
+        }
+
+        /* the specificity of this chass and element selector is 10+1=11...this has highest specificity so this will be used */
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* the specificity of this clas selector is 10 */
+        .cred {
+            color: red;
+        }
+
+        /* the specificity of this class selector is 10 */
+        .cpurple {
+            color: purple;
+        }
+
+        /* the specificity of this attribute selector is 10 */
+        [data="a"] {
+            background-color: maroon;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <!-- data="a" is attribute selector. yellow, cred, cpurple is class selectors -->
+        <h1 class="yellow cred cpurple" data="a">CSS Specificity</h1>
+    </div>
+
+</body>
+
+</html>

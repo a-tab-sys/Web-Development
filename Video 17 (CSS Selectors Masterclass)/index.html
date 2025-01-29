@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* element selector */
+        /* div{
+            /* background color is a property, red is a value
+            background-color: red;
+        } */
+        
+        /* class selector */
+        .red {
+            background-color: red;
+        }
+
+        /* ID selector */
+        #green{
+            background-color: green;
+        }
+
+        /* child selectors */
+        /* want to style any paragraphs inside div,
+        however the paragrph tag must be a direct decendent of div. if you have a paragraph inside an article tag inside div then it wont be affected */
+        div>p{
+            color: blue;
+            background-color: brown;
+        }
+
+        /* descendant selector */
+        /*  this will affect any p within div, whether if it is a direct descendant or not*/
+        div p {
+            background-color: brown;
+            color: blue;
+        }
+
+        /* universal selector */
+        /* will effect all elements */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* pseudo selector */
+        /* for anchor tage, lets you pick the color once the link has been opened and before it been opened*/
+        a:visited{
+            color: yellow
+        }
+        a:link{
+            color: green;
+        }
+        /* when you click over the link the bakcground color will become red */
+        a:active{
+            background-color:red;
+        }
+        /* when you hover over the link, background color will be yellow */
+        a:hover{
+            background-color: yellow;
+        }
+        /* whereever p is the first child within its parent. the first child, not all the childs. for exaple: first p inside div.or first p inside article.*/
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am a div
+        <p>i am a paragraph inside div</p>
+        <article><p>i am a para inside article inside div</p></article>
+    </div>
+    
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook2.com">Go to facebook</a>
+    <div id="green">
+        i am anoter div
+    </div>
+</body>
+</html>

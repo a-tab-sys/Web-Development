@@ -1,2 +1,3 @@
 css selectors allow us to choose specific elements and apply styles to them
 
+More on Pseudo Selector: https://web.dev/learn/css/pseudo-classes

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+
+            /* if you specify height of 200 without box-sizing: border-box;, then the content will have height 200 and on top of that you will have padding, margin, border. if you add box-sizing: border-box;, the 200 height wil inclue content, border and padding, NOT MARGIN. */
+            box-sizing: border-box;
+        }
+        .box2{
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            height: 200px;
+        }
+
+        /* the margin for box 1 and box 2 is both 25 so between box 1 and 2 shouldnt your margin be 50? Its not when you visually look at the output. this is because of margin collapse principle. basically this maeans that if 2 elements have a margin that overlap which ever element has the larger margin, that is the marginvalue that will be kept and used. since both our is 25 and 25, both are equal sowe keep 25. if one box was 25 the other was 35 then we would keep the 35.*/
+
+    </style>
+</head>
+<body>
+    <!-- below we gave the div element multiple classes -->
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>

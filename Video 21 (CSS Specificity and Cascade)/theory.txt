@@ -1,0 +1,18 @@
+css has a cascade algorithm. this determines what properties are applied and what are not applied. 
+
+cascade algorithm follows a couple rules- read here about cascade algorithm: https://www.codewithharry.com/tutorial/css-specificity/
+
+So, the order of specificity is below, you sould change things from right to left because that way you can override things:
+
+Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector
+
+Specificity Calculation
+To calculate specificity, assign a value to each part of the selector: THESE SHOULD BE USED FROM TOP TO BOTTOM
+Universal Selector: 0
+Element selectors and pseudo-elements: 1
+Class selectors, attribute selectors, and pseudo-classes: 10
+ID selectors: 100
+Inline styles: 1000
+
+
+AVOID INLINE STYLES because they are so hard to override
