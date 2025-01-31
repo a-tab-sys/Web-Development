@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid blue;
+            /* we can set our display property for block element to inline */
+            
+            /* display: inline; */
+            display: inline-block;
+            
+            /* when you add padding or margin to inline elements, the top doesnt get padding, so we can use inline-block display instead. Also with inline you could not set the width, so usin inline lck insead for that*/
+            padding: 45px;
+            margin:34px;
+
+            width: 344px;
+        }
+
+        .box1{
+            /* display none property hides the element and also the space taken by the element */
+            /* display:none; */
+
+            /* if we do visibility hidden  property it hides the eleent but the space the element initially took reamains in tact */
+            visibility: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- because our class for both divs is box and we set .box to display is inline, these are going to be inline -->
+    <div class="box box1">I am a box,</div>
+    <div class="box">a nice box</div>
+<span>I am a very</span>
+<span>great box</span>
+</body>
+</html>

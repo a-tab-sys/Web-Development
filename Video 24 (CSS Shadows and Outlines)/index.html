@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            padding: 34px;
+
+            /* see codewithharry iste for shadow syntax. also open preview in browser and inspect and change values in stlye to visually see what looks lie what you want */
+            /* box-shadow: h-offset v-offset blur spread color inset; */
+            box-shadow: 5px 15px 5px green;
+        }
+        .text-element { 
+            /* text-shadow: h-offset v-offset blur color; visit codewithharry fro syntax*/
+            text-shadow: 2px 2px 4px #a51468; 
+
+            /* outlines */
+            /* outline doesnt take up space,its not part of box model. they are drawn outside of the borders and you cn pick an offset value. cant change shape of outlines. you can change this property in borders and outline will kind of follow with those changes. */
+            outline: 2px solid black;border: 2px solid green;
+            border-radius: 8px;
+            outline-offset: 12px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a box
+    </div>
+    <p class="text-element">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod labore voluptate magnam, ab odio maxime recusandae est inventore commodi minus et quo placeat sunt corrupti veritatis, facilis impedit animi. Tenetur corporis cupiditate voluptatibus repellendus aspernatur veniam quos a enim ad nulla porro animi eum reiciendis magni dignissimos qui autem maxime labore, accusantium libero aperiam?
+    </p>
+</body>
+</html>

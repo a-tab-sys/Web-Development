@@ -1,0 +1,9 @@
+px pixels are not the only uni we can use in css
+we have many options to use depending on your application
+
+if ou want to make the height of something relative to somehting else
+you can do that
+
+a pixel is 196th of an inch
+
+----> to see more units look up mdn web docs for css units

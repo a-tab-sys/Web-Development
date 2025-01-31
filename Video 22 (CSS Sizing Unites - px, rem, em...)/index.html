@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            /* html is the root element. if you dont outwordly specify a font in some elements but you have this specified, then font will default to this */
+            font-size: 12px;
+        }
+
+        .box {
+            /* px pixels are not the only uni we can use in css */
+            box-sizing: border-box;
+            border: 2px solid black;
+
+            /* nitro5 - my laptop pixel dimensions are 1920 x 1080 Pixels */
+            /* width: 1920px; */
+
+            /* viewport width is not fixed like pixels, your basing sizing on the width of the screen being used*/
+            /* 100vw is full width of screen, 80vw is 80 percent o screen width */
+            width: 80vw;
+            height: 10vh;
+
+            /* this adds a margin to both sides of your box, so that your box is centered on the screen. ONLY works for bock elements not inline elements. will work for div not span.*/
+            margin: auto;
+
+            background-color: aquamarine;
+        }
+
+        .container {
+            /* px pixels are not the only uni we can use in css */
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+
+            /* if you put 2 values in margin, first is top/bottow, secong is left/right margin. top/bottm margin we put 23px,and left/right margin we put auto */
+            margin: 23px auto;
+            background-color: aquamarine;
+            /* font-size: 18px; */
+
+        }
+
+
+        .container p{
+            /* em basically means that this value will be inherited. you set a font size in container. if you set it to 1em in p of container your telling it to inherit from container*1. so 1.5em is inherited value * 1.5. its letting you scale up and down from inherited value */
+            /* open in browser, inspect, computed and filter for font size to see what it computes to  */
+            font-size: 2em;  
+
+
+            /*if i wanted toset the font size to be 2x the root element font size, this can be done by using rem  */
+            /* font-size: 2rem; */
+
+
+            /* you can use % values also, this is saying that the paragraphs width is 50% of parents width. to use this the parents width has to be set. if it wasnt set then this is meaningless.*/
+            width: 50%;
+        }
+
+
+        /* 
+        VMIN / VMAX
+        on a phone your vmin is the widthbutcause width is less than height.
+        
+        on computer vmin in height because height is less that width*/
+        .mycont{
+            box-sizing: border-box;
+            color: black;
+            border: 2px solid black;
+            margin: 23px auto;
+            font-size: 22px;
+
+            /*on my computer vmin is heightso here were saying 100vh. on this device vmin=vh. but on a phone vmin would be width. so in that case vmin=vw. VMAX is just the opposite */
+            width: 80vmax;
+            /* above is = to width: 80vw */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        this is a box - block element
+    </div>
+
+    <span class="box">
+        this is a span - inline element
+    </span>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsum sit dicta mollitia harum, facere cum
+            amet aliquam! Soluta eligendi blanditiis ea! Itaque consequuntur dolores sapiente, perspiciatis aspernatur
+            quo molestias, est facilis commodi accusantium mollitia provident distinctio, adipisci repudiandae?
+            Perferendis deleniti, odio praesentium optio pariatur eligendi. Perspiciatis amet dolore quae placeat ullam
+            corporis possimus labore quaerat.
+        </p>
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+
+</html>

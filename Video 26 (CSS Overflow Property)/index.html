@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property</title>
+    <style>
+        .box {
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+
+            /* adds a scroll bar to deal with overflow. scroll bar is there whether there is overflow or not */
+            /* overflow: scroll; */
+
+            /* only view a scroll bar if there is overflow, otherwise no scroll bar is visible */
+            /* overflow: auto; */
+
+
+            /* following 2 lines cause you to hide overflow and adds ... at the end of what it shows */
+            /* overflow: hidden; */
+            /* text-overflow: ellipsis; */
+            /* white-space: nowrap;  */
+
+
+
+            /* causes it to only take up horizontal space, only 1row of text so you have a horizontal scroll bar. the text wont fall on lower lines*/
+            /* white-space: nowrap; */
+
+            /* sililar to overflow hidden but it does not allow any scroll */
+            /* overflow: clip; */
+
+
+            /* can control overflow x and y seperately */
+            /* overflow-x:hidden;
+            overflow-y: scroll; */
+            /* write above in one line x is hidden, y is auto */
+            overflow: hidden auto;
+            /* overflow: auto hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        i am a box Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolor illo officiis cum excepturi,
+        nisi voluptatem repellendus eveniet placeat, ipsam delectus nulla. Obcaecati molestias aspernatur ipsum eligendi
+        unde at, non repellendus laboriosam delectus
+
+    </div>
+</body>
+
+</html>

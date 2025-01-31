@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS list styling</title>
+    <style>
+        nav ul li{
+            /* can change the marker by chaning list style */
+            /* list-style: devanagari; */
+
+            /* change the marker to be some emoji...cant access emoji pop up. not working currently */
+            /* list-style-type:"<emoji>"; */
+
+            /* you can set an image as the marker itself */
+            /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+
+            /* notice marker is not covered in background colors scope */
+            background-color: yellow;
+            
+            /* add the list style positionto inside and now with this line background color will also highlight the markers */
+            /* list-style-position: inside; */
+            border: 2px solid black;
+
+            /*you can set the list style, list style position, and image in one go. but disk and url are replacing the same thing so use one or the other*/
+            /* list-style: disc inside url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+
+
+            list-style: disc inside;
+            
+            /* list-style: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif") inside; */
+
+            /* you can set list style as none */
+            /* list-style: none; */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contct</li>
+        </ul>
+    </nav>
+</body>
+</html>
