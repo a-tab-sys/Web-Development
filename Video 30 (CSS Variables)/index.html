@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /* in root you can make global variables. you can initialize variable with colors and use those throughout your site for coloring */
+        /* css variables can hold other properties as well, not just color. we used for padding, opacity and color...you can use for many things */
+        :root{
+            --color:blue;
+            --seccolor: rgb(109, 109, 160);
+            /* defpad means default padding */
+            --defpadd: 23px;
+            --defop: 0.2;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav {
+            background-color: var(--color);
+        }
+
+        ul{
+            display: flex;
+        }
+        
+        ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpadd);
+            border: 2px solid var(--seccolor);
+        }
+        
+        /* if i want to change the color a little for a specific element i can change the implementation of the global variable in a  block and make a local variable version that will onl work for that block  */
+        /* you can also add a fall back color variable so if --color is not found below bc maybe this variable hasnt been created then it will use blue instead */
+        ul li:first-child{
+            --color:orange;
+
+            background-color: var(--color, red);
+        }
+        
+
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ad, fuga nostrum dicta quasi aspernatur cum ex
+        voluptatum minus nesciunt sed, facere necessitatibus, aliquam quibusdam? Omnis tempore debitis fugiat dolore.
+        Et, odit illo laboriosam cupiditate reprehenderit temporibus commodi eaque, in iusto repellendus animi quam
+        eius.
+    </div>
+</body>
+
+</html>

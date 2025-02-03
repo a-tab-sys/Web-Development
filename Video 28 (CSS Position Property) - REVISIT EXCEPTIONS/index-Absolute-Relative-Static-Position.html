@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS poesition property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+        
+        /* box1 position is static so the css for top will not work */
+        /* .box1{
+            background-color: aqua;
+            top: 15px
+        } */
+
+        /* box1 position is absolute*/
+        .box1{
+            background-color: aqua;
+            /* so we give this abosulute position, and set the top to 0 px. so now this will try to find out top 0px relative to what? so it will look to its parents positioning. our parent class is not a positioned element. so it will go to the grandpaent. the body which is grandparent also is not positioned element. so this it will go to that great grandarent <html lang="en"> , this also is not positioned element but there is nothing above this so it will alight top=0px with that. In general absolute position  will seek out nearest position ancestor */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        /* box2 position is relative so you can add top, left, right botoom values */
+        .box2{
+            background-color: azure;
+            position: relative;
+            /* giving room from the top, so it goes down */
+            top: 0px;
+            left: 0px;
+            /* when position is set to relative- you can change z index value */
+            /* when z index is 1 then the box2 is brought to front*/
+            z-index: 1;
+        }
+
+        .box3{
+            /* when position is set to relative- you can change z index value */
+            background-color: bisque;
+            position: relative;
+            /* z-index: 1; */
+        }
+
+        .box4{
+            background-color: purple;
+        }
+
+        .parent{
+            padding: 3px;
+            margin: 34px;
+            border: 2px solid purple;
+            
+            /* if you added position here then this will be box1 absolutes nearest parent  */
+            
+            /* position: absolute; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1" ></div>
+        <div class="box box2" ></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>
+
+<!-- position: relative allows you to change top, bottom.left... values -->
+
+<!-- position: absolute = seeks the nearest positioned parent and then behaves relative to that-->

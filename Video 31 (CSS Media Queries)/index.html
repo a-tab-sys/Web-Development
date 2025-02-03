@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Meida Query</title>
+    <style>
+        body {
+            background-color: red;
+        }
+
+        /* 
+        
+        syntax to add media query : 
+
+        @ media not|only mediatype and (expressions) {
+        CSS-Code
+        } 
+
+        */
+
+        /* 
+        
+        media types include; screen(includes pone, laptop, any screens), all(on all devices), print(viewing on printer), speech(speech devices for visual impairdness assisance)  
+        
+        
+        expression could be max-width or min-width */
+
+
+        /* this is saying only when we are on a screen if the max width is 455 pixels, your background color will me blue, so if your device is smaller than 455 pixels itll be blue otherwise its red. test by open in browser, inspect and change width. we also have boxes going horizontally for larger screens, and switch to verticle representation for smaller screen widths. BASICALLY this lets you control how your site is viewed on a phone, tablet, laptop....etc*/
+
+
+        @media only screen and (max-width: 455px) {
+            body {
+                background-color: blue;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (orientation: landscape){
+            body{
+                /* see this border when your orientation is landscape */
+                border: 5px solid purple;
+            }
+
+        }
+
+
+
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: azure;
+            padding: 3px;
+            margin: 3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        Hey i have a red body
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+
+</body>
+
+</html>

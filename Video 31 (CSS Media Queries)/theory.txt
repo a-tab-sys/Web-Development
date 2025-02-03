@@ -1,0 +1,5 @@
+you can change styles on the basis of what device you are viewing on
+
+when css  2 was around there was a media rule introduced, the purpose was tht the media query would allow you to change styles based on the device being used to acess a site 
+
+in css 3 this was renamed to media query

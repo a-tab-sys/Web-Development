@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{
+            background-color: blue;
+            color: white;
+        }
+        
+        /* METHOD 1 - use first child */
+        /* div p:first-child{
+            background-color: yellow;
+            color: red;
+        } */
+         
+        /* METHOD 2 - use nth child and n=1 */
+        div p:nth-child(1){
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -24,7 +44,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quia. Dolorum, voluptas porro. Possimus quae
             officiis reprehenderit sed alias vel?</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae facilis quae eum maxime autem dolor quia
+        <p>Lorem ipsu m dolor sit amet consectetur adipisicing elit. Beatae facilis quae eum maxime autem dolor quia
             ratione saepe porro soluta.</p>
 
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique porro quam ex perspiciatis sapiente

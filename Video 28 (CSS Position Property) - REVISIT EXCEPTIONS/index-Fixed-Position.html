@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS poesition property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 433px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+        
+        .box1{
+            background-color: aqua;
+            
+        }
+
+        .box2{
+            background-color: azure;
+
+        }
+
+        /* fixed position basically stays fixed in that area even when you scroll*/
+        .box3{
+            background-color: bisque;
+            position: fixed;
+            bottom: 0px;
+            left:8vw;
+            height:111px;
+
+        }
+
+        .box4{
+            background-color: purple;
+        }
+
+        .parent{
+            padding: 3px;
+            margin: 49px;
+            border: 2px solid purple;
+            
+            /* if you added position here then this will be box1 absolutes nearest parent  */
+            
+            /* position: absolute; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1" ></div>
+        <div class="box box2" ></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>
+
+<!-- position: relative allows you to change top, bottom.left... values -->
+
+<!-- position: absolute = seeks the nearest positioned parent and then behaves relative to that-->
