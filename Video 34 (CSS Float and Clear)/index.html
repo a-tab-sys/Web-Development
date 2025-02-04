@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS float and clear</title>
+    <style>
+        .card{
+            border: 2px solid red;
+        }
+        /* card child 1 is image, child 2 is smaller div, child 3 is the bigger div */
+        .card:nth-child(3)
+        {
+            background-color: aqua;
+            /* this clear: right property is saying i dont want any elements floating to the right of the text, so the photo can not float to the right of this text as it can for the first div.
+            can also do: clear: both  */
+            clear: right;
+        }
+        .cards{
+            /* Because you used the float property on the image, if your image overflows the cards class container, that can happen. it can overflow. to control this we can add a property: display: flow-root. this will make our elements stay within their container*/
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            /* this moves image to the left and allows text to appear to its right. without this you would have the image and text would only be shown below. */
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <!-- keyboard shortcut type: .cards>.card*3 to get below -->
+    <div class="cards">
+        <img src="image.png" alt="boat photo" width="230">
+        <div class="card">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quod nam laudantium! A esse laboriosam perspiciatis tempore ipsa maiores iste dolor quod nulla, quos impedit distinctio dolorum vero odit molestiae quam nobis tempora ab.
+            </p>
+        </div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perferendis molestiae ab vel accusamus. Sint laboriosam cupiditate, labore quo saepe repellat, corrupti est molestiae iusto aspernatur expedita nostrum soluta fugit provident cum unde. Fugit eum veniam aliquam, dignissimos commodi dolorem nam! Vitae quisquam atque veritatis nisi soluta, quis laboriosam magni repellat numquam? Et commodi dignissimos a eos nihil praesentium quibusdam sequi omnis. Suscipit dicta rerum possimus, at, vitae voluptatum harum eligendi in earum id ipsum molestiae iste magni tempore libero repudiandae! Harum fuga hic cupiditate repellendus esse magni repudiandae mollitia vitae qui minima! Molestias aliquid in quo iste minus deleniti soluta sapiente beatae amet. Natus sunt totam perferendis harum eaque odio! Accusamus magnam natus repudiandae temporibus voluptate similique voluptas aut quos alias vel nihil voluptatum, in soluta porro fugiat obcaecati impedit tenetur voluptatibus laudantium. Sapiente tempora totam, hic qui atque dolor! Cum harum, quos, omnis itaque quia unde veritatis perspiciatis vel culpa hic nemo minima consequuntur. Sed consequuntur neque iure asperiores delectus amet velit. Provident tenetur magnam, corporis inventore hic voluptatum unde maiores pariatur eligendi labore cum libero consectetur. Numquam optio fuga aut non voluptatum aspernatur tenetur labore molestias, earum animi, alias sit blanditiis consequuntur nemo! Debitis voluptate, eaque exercitationem id ratione harum culpa odit est quasi nemo, laboriosam cumque tenetur nihil nesciunt alias totam nam, sapiente provident porro! Necessitatibus esse ut ullam? Dicta ipsa non blanditiis nulla eos enim minus, id ab dolores earum, obcaecati animi, repudiandae ea vero labore. Dolor reprehenderit qui tempore mollitia eum vero quaerat necessitatibus. Dolores amet nemo laudantium. Ea quis molestias libero officiis, ullam fugiat voluptas? Porro nemo magnam ducimus numquam nobis id at in ab voluptas cumque impedit officiis sint veniam sequi, commodi distinctio maiores. Quaerat est blanditiis earum provident sit quae sunt, sapiente, vel explicabo quis dolores aspernatur quod asperiores porro voluptatibus amet dolore beatae ullam veniam deserunt quia consequuntur. Sit reprehenderit, rem excepturi neque beatae velit! Dolorem sed iste voluptatum ipsa qui, doloremque eveniet officiis accusamus in sapiente id minima ullam! Dolorum, iusto voluptatem?</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

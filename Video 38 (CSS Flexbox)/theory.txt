@@ -1,0 +1,6 @@
+first float and positioning were used alot to align content
+
+this was very difficult
+
+until flexbox was introduced
+

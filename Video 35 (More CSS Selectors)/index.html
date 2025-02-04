@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: more on selectors</title>
+    <style>
+        /* this says if box is its parents first child then */
+        .box:first-child {
+            background-color: red;
+        }
+
+        /* this selects the first line of your divs*/
+        .box::first-line{
+            background-color: yellow;
+        }
+        /* universal selector: lets you change the properties of everything in boxes class*/
+        .boxes *{
+            color: blue;
+            border: 2px solid green;
+        }
+        
+        /* this selector lets you select based o attributes. here we use data attribute, but you can use with any attribute. this selector says if data-color=primary then do so and so... */
+        [data-color="primary"]{
+            margin-top: 45px;
+        }
+
+        /* selectors can be grouped as well, it you want to apply some properties to many element/attribute...etc */
+        p, a, .box, [data-color="primary"]{
+            margin-bottom: 30px;
+        }
+
+        /* here we are saying that in class .box,if i have an even number child, apply the properties */
+        .box:nth-child(even){
+            background-color: violet;
+        }
+
+        /* this selector lets you count from botton to top when selecting children. 1 from bottom is the last. 2 from bottom is the second to last */
+        .box:nth-last-child(1)
+        {
+            background-color: blanchedalmond;
+        }
+
+        /* if you type .box:nth look at the options and explore the different psuedo selectors */
+
+        /* THe below are not selectors, they are psuedo elements. this lets you insert elements via css dynamically. nd because you user before it will be put before your .boxes main content. you can also do after */
+        .boxes::before{
+            content: "harry is good";
+            color: brown
+        }
+        .boxes::after{
+            content: "web dev is also good";
+            color: brown;
+        }
+
+        /* you can change the look of text as its selected or highlighted with the cursor */
+        /* .box::selection{
+            color:greenyellow
+        } */
+        /* or to apply this to whole pages content */
+        ::selection{
+            color:greenyellow;
+            background-color: black;
+        }
+
+
+        /* first letter selector. if i want the first letter in my .box class to have certain property*/
+        .box::first-letter{
+            background-color: black;
+            font-size: 45px;
+        }
+
+        /* you can target th input as well */
+        input::placeholder{
+            color:greenyellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey i am a box Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, excepturi id, explicabo ad fugiat temporibus nobis culpa aliquid neque nemo pariatur enim, porro in odit ut similique dicta at? Consequatur quisquam architecto odit nulla tempora veritatis, dolores aspernatur minima ipsum quod nisi eius culpa rerum dicta doloremque aperiam blanditiis pariatur recusandae molestias iure neque ratione. Iste, unde. Corruptident quisquam consequatur ex ipsa aut, nam vel! Commodi quae animi beatae nesciunt, nobis voluptatia odit quibusdam esse iure, accusantium, expedita reiciendis sequi repudiandae cum dolore. Adipisci minima dicta fugiat aliquid quisquam ratione voluptatibus voluptas aliquam ab! Amet, laudantium rerum. Quaerat rerum odio non consequuntur eos, necessitatibus excepturi facilis nam possimus iure! Cumque enim pariatur deserunt quia voluptas quaerat? Voluptatibus, sunt repellendus? Sit molestias nulla impedit veritatis possimus aspernatur similique quabore quo enim aperiam recusandae. Reprehenderit, dolor? Alias eveniet harum perspiciatis a officia inventore mollitia. Expedita corrupti molestias similique. Corporis laudantium consequatur voluptatem pariatur culpa consequuntur suscipit reiciendis! Excepturi, similique sequi quis enim consequuntur quibusdam adipisci?</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+
+    <style>
+        
+        /* the properties in container are meant only for container. on individual items the properties are diferent. */
+
+        .container{
+            border: 2px solid red;
+            height: 80vh;
+
+            /* if you look at it now the items are displayed vertically. if we want to display then horizontally instead we can use flex box on the container */
+            /* display: flex means you can use flexbox properties */
+            /* by default, flexbox aligns your items left to right because without use of flex the default behavior is verticle */
+            display: flex;
+
+            /* these properties are to be used on the container not individual items */
+
+            /* this will center our content in MAIN axis direction. 
+            you can do:center, fex-end, flex-start, space-around, space-between, space-evenly (these distribute the space)*/
+            justify-content: center;
+
+            /* this will center out items in CROSS axis direction.
+            you can do: flex-start, flex-end, center...etc*/
+            align-items:center;
+
+            /* flex direction is by defeult left to right, but you can change this. you can make it top to bottom  */
+            /* flex-direction: column; */
+            
+            /* this will back it column but botoom to top, unside down */
+            /* flex-direction: column-reverse; */
+            
+            /* this is default : left to right*/
+            /* flex-direction: row; */
+           
+            /* his is right to left */
+            /* flex-direction: row-reverse; */
+
+
+            /* the direction your items are laying in is your "main axis". so then the perpendicular direction to that is your "cross axis". when you change flex-direction to column it will change your axis direction.  the justify content and alin items properties depend on what your main axis and cross axis are. 
+            
+            justify-content: center; - works on main axis: whichever one that is 
+            
+            align-items: center; - works on cross axis: whichever one that is
+            
+            Main size and cross size: the size on your container along main axis is main size. the size of your container along cross axis is cross size.
+            */
+
+
+
+            /* tis left use rows to display. so rather than them all being in one line, they will move to next line when out of space */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+
+
+            /* align-items is used when we only need to aligh 1 line, like if all our items were in the same row. aligh-content, we will use if our items are in multiple rows. because we did wrap, we are displaying in multiple rows 
+            
+            there is no justify-items in flexbox*/
+            /* align-content: center; */
+
+
+            /* this property lets you define flex direnction and flex-wrap in one line  */
+            /* flex-flow: row wrap; */
+
+
+            /* gap property. between the items you are creating a gap in hornizontal and vert dirn. */
+            /* gap: 60px; */
+            /* row-gap: 50px; */
+            /* column-gap: 20px; */
+            /* do in 1 line: row, column */
+            /* gap: 50px 20px; */
+        }
+
+        .item{
+            height: 92px;
+            width: 92px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            margin: 4px;
+
+            /* flex-grow property. by defaule flex grow property is 0. when we say it is 1 we are saying that for the whole width of the flex box (the container) all the items should take equal room width wise*/
+            flex-grow: 1;
+
+
+            /* order property lets you change the order your boxs appear in. low number oder will show first. higher number order will show later. default as in not adding order is basically like order 0 so if you add order 1 then its still after the order 0 elements but before order 2 and 3 elements */
+   
+        }
+        
+        /* give 1 item a larger flexgrow value and give a flex shrink value. flex shring will only shrink when necessary so if you make the page width dimensions smaller. basically it will just shrink 2x faster that normal */
+
+        .item1{
+            flex-grow: 2;
+            /* this property lets alignment happen seperate from rest of items */
+            align-self: flex-end;
+        }
+        .item2{
+            flex-shrink: 2;
+
+        }
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item item1">2</div>
+            <div class="item item2">3</div>
+            <!-- we gave this order 1 and 3-->
+            <div class="item order-1" >4 order1</div>
+            <div class="item order-3" >4 order3</div>
+            <div class="item order-3">66 order3</div>
+            <div class="item"></div>
+
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
