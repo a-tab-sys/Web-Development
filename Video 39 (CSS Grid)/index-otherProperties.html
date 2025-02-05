@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid black;
+            /* when you put display grid and inspect, your browser will sho it as a grid */
+            display: grid;
+
+            /* the fr unit says that whatever width is available, take 1 fraction of it. so if youe write it 3 times each takes a third. if your wrote fr 4 times, each takes a fourth. if you specified a 2fr it would ust take double the space*/
+            
+            grid-template-columns: 1fr 2fr 1fr;
+
+            /* if you needed to make many column of equal width, you could: this makes 7 fr culumns*/
+            /* grid-template-columns: repeat(7, 1fr); */
+            
+            /* lets you select a min and max width for your columns 100px, and the max is then 1fr*/
+            grid-template-columns: repeat(7, minmax(100px,  1fr));
+
+            /* this will add gaps between items 
+            for flex box and grid do not use padding, use gap */
+            /* gap: 34px; */
+            row-gap: 10px;
+            column-gap: 30px;
+
+            /* to align within the cells. esscentially this centers your items in your grid. center on any axis...other than center theres left, end, tart...etc...dont use flex options */
+            justify-items: center;
+            align-items: center;
+
+            /* to align within the whole container. if your container is really big, and your grid is only taking up a little portion of your container this will do something. esscentially this centers your grid in your container*/
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        .items {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item2{
+            /*lets you align specific items on x and y axis. this property is moving your items within its cell space*/
+            justify-self: end;
+            /* align-self: start; */
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+
+</html>

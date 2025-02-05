@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            /* when you put display grid and inspect, your browser will sho it as a grid */
+            display: grid;
+
+            /* this property lets you pick how many columns and the width of those columns  */
+            /* if you only declared column or only declared rows, then it would figure out whtever you didnt declare automatically based on how many items you have*/
+
+            /* grid-template-columns: 120px 100px; */
+            grid-template-rows: 100px 100px 100px;
+            
+            /* if you wanted to name the columns*/
+            grid-template-columns: [pehla] 120px [doosra]100px [theesra];
+            
+            
+            
+            /* grid track is the space between any 2 lines that i choose */
+
+            /* grid area is the area. if i select 2 verticle and 2 horizontal lines, then the area in between those lines is your grid area */
+
+
+        }
+
+        .items {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        /* item4 pushes item 1 from its original place so the items are just all shifted if i want both to exist in that area and overlap i can add the same properties to item1 class*/
+        .item4{
+            /* this is sayng the grid row should start at 1 and go till 2 */
+            grid-row: 1/2 ;
+            
+            
+            /* 
+            or you can do this, same thing:
+            grid-row-start: 1;
+            grid-row-end: 2; 
+            */
+
+            /* this is sayng the grid column should start at column 1 and go till column 2 */
+            grid-column: 1/2;
+            grid-column: doosra/theesra;
+
+        }
+        .item1{
+            grid-row: 1/2 ;
+            grid-column: 1/2;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items item4">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+
+</html>
