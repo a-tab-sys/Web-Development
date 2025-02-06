@@ -1,0 +1,6 @@
+for something simple use transition property
+
+to make complex aimations, that repeat and work on various different elements use animations.
+
+animations good because you can name them and use them like we had: AmmaarahKaAnimation. and it can be ran in lots of areas
+

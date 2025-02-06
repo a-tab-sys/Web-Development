@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FIlters</title>
+    <style>
+        /* GO ON INSEPCT to visally see the changes and change values around */
+        
+        /* img {
+            filter: blur(3px);
+        } */
+        .img1{
+            /* you can give contrast and brightness number or percentage */
+            filter: brightness(122%) contrast(34);
+        }
+        .img2{
+            /* filter: sepia(100%); */
+            
+            filter: invert(1);
+
+        }
+        .img3{
+            /* filter: grayscale(87%); */
+            
+            /* in opacity: 0=transparent, 1=fully visible */
+            filter: opacity(0.5);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/800px-Image_created_with_a_mobile_phone.png"
+            alt="">
+        <img class="img2" src="https://cdn.dnaindia.com/sites/default/files/2024/08/15/2646267-srk-fi-1.jpg?im=FitAndFill=(1200,900)"
+            alt="">
+        <img class="img3" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRrYFYk8PKkSFzJJvfj6Jsv9JzxjDppc2rkKSEgUrPKEzBnx5djHQLXebfb9ZX1Ae7AxUBNRzr6d4KAcs__3dVIEA"
+            alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .container{
+            background-color: rgb(9, 106, 106);
+            height: 80vh;
+            width: 30vw;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            border: 2px solid black;
+            /* animation: AmmaarahKaAnimation; */
+            /* animation-duration: 3s; */
+            
+            /* if you want the animation to run a number of times. infinite if you want it to run repeatedly */
+            /* animation-iteration-count: 3; */
+
+            /* animation-timing-function: ease-out; */
+
+            /* animation-delay: 1s;             */
+            
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate-reverse; */
+            
+            /* animation-play-state: paused; */
+
+            /* when your animation reaches its end, it will stay at its ending position and ending state bc you entered forwards.  normally if would just return back its initial posiion if you had an iteration of 1. can also put in backwards, this causes it to return to its original initial position and state*/
+            /* animation-fill-mode: forwards ; */
+
+            /* animation shorthand, let ou define everything in 1 line */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* this you can use multiple animations just seperate with a comma */
+            animation: AmmaarahKaAnimation 1s ease-in-out 3s 1 forwards, ammtab 3s ease-in-out 3s 1;
+
+
+        }
+
+        @keyframes AmmaarahKaAnimation {
+            from{
+                background-color: aqua;
+
+            }
+            to{
+                transform: translateX(1000px);
+                background-color: yellowgreen;
+            }
+        }
+        @keyframes ammtab {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            40%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>
