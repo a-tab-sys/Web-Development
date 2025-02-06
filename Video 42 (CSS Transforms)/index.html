@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+
+       
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: beige;
+            border: 2px solid black;
+           
+            /* to center the text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* default transform origin is center of div or box. 50-50 */
+            
+            
+            /* transform: rotate(40deg); */
+            
+            /* 360 deg is 1 turn */
+            /* transform: rotate(0.25turn); */
+            
+            /* rotate around any axis */
+            /* transform:rotateX(40deg); */
+
+            /* scale sixe up and down */
+            /* transform: scale(1.6);
+            transform: scaleX(2); */
+
+            /* transform: skew(34deg);
+            transform: skewX(50deg); */
+
+            /* when you translate by a percentage amount, your transliating by that percent of its width */
+            /* just translate, not specifying x or y will translate in x and y dirn */
+            /* transform: translate(34px); */
+            /* transform: translateX(50%); */
+            /* transform: translateY(-50%);  */
+
+            /* using multiple properties */
+            /* transform: translateY(100%) skewX(40deg) translate(45%); */
+
+            /* transforms are often used when we are creating something like a nav bar and we want to hide it so we can do something like:*/
+            /* transform: translateY(-100%)  */
+
+            /* default transform origin is center of div or box. 50-50. we can change this  */
+            transform-origin: -0% -0%;
+            transform:rotate(40deg);
+
+        }
+
+        .container{
+            width: 100vw;
+            height: 80vh;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+
+        </div>
+    </div>
+    
+</body>
+</html>

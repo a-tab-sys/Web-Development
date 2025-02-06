@@ -1,0 +1,5 @@
+2 types of transforms in CSS
+- 2D transforms - changing scale / translating / rotate in 2d space
+- 3D transforms - manipulate objects in x, y and z axis
+
+transforms are often used when we are creating something like a nav bar and we want to hide it so we can do something like translateY(-100%)

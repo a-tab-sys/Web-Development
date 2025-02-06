@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 50vw;
+            height:40vh;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height:4vh;
+
+            /* we will add a transition property to smoothen transition of items. need to know these 4 properties*/
+            /* what property do you want to transition? */
+            /* transition-property: transform; */
+            transition-property: background-color, transform;
+            /* transition-property: all; */
+            
+            /* for what duration do you wnt transition to last? */
+            transition-duration: 3s;
+            
+            /* what function? You can go on inspect and look at this property. there are many options for how your transition should be paced but you could even define your own timing by manually changing the graph */
+            /* transition-timing-function: ease-in-out ; */
+            transition-timing-function: cubic-bezier(0.33, 1.3, 0.58, 1);
+            
+            /* after what delay should transition begin? */
+            transition-delay: 1s;
+
+            /* these 4 properties can also be written in one line */
+            /* transition: all 3s ease-in 1s; */
+        }
+
+        /* basically below you have the class translate associated with your box, when you add and remove translate class from our box by removing it from this line: <div class="box translate">. by opening in browser and inspecting you will see changes occur  */
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>
