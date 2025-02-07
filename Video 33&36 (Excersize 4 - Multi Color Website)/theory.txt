@@ -1,0 +1,2 @@
+use css variables
+to make a multi color nav bar based on some global variables

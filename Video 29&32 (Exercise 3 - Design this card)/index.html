@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3: Design Card</title>
+    <style>
+
+        body{
+            background-color: gray;
+        }
+
+        .card {
+            background-color: white;
+            /* height: 344px; */
+            width: 198px;
+            border-radius: 7px;
+            padding: 0 0 34px 0;
+
+        }
+
+        .image{
+            padding: 5px;
+
+        }
+
+        .image img{
+            border-radius: 7px;
+        }
+
+        .content{
+            padding: 7px 13px;
+        }
+        .content p{
+            font-size: 13px;
+        }
+        .capsules{
+            /* top/bottom is 0, left/right is 34 */
+            padding: 0 34px 0 14px;
+        }
+        .capsules span{
+            border: 1px solid gray;
+            padding: 0px 6px;
+            border-radius: 7px;
+            font-size: 12px;
+        }
+
+        .button {
+            text-align: center;
+
+        }
+        .button button{
+            padding: 7px 9px;
+            border-radius: 15px ;
+            background-color: rgb(160, 160, 206);
+            color: blue;
+            font-size: 12px;
+            border: None;
+            margin-top: 3px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image">
+            <img width=188" src="image.png" alt="Train Image">
+        </div>
+        
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+
+
+        </div>
+        
+        <div class="content">
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iusto a quisquam tempore laboriosam qui est sint reiciendis porro inventore?</p>   
+        </div>
+
+        <div class="button">
+            <button>Submit</button>
+        </div>
+
+
+</body>
+
+</html>
+
+
+<!-- 
+/* outlines */
+/* outline doesnt take up space,its not part of box model. they are drawn outside of the borders and you cn pick an offset value. cant change shape of outlines. you can change this property in borders and outline will kind of follow with those changes. */
+outline: 2px solid black;border: 2px solid green;
+border-radius: 8px;
+outline-offset: 12px;
+
+
+
+span is inline
+image is inline
+div is block
+heading is block
+
+
+
+
+.box2{
+background-color: azure;
+position: relative;
+/* giving room from the top, so it goes down */
+top: 0px;
+left: 0px;
+/* when position is set to relative- you can change z index value */
+/* when z index is 1 then the box2 is brought to front*/
+z-index: 1;
+}
+
+.box3{
+/* when position is set to relative- you can change z index value */
+background-color: bisque;
+position: relative;
+/* z-index: 1; */
+}
+
+.box4{
+background-color: purple;
+}
+
+.parent{
+padding: 3px;
+margin: 34px;
+border: 2px solid purple;
+
+/* if you added position here then this will be box1 absolutes nearest parent */
+
+/* position: absolute; */
+}
+</style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>
+
+Relative Position - the element is positioned relative to its normal position. allows you to change top, bottom.left... values
+
+Absolute Position- the element is positioned absolutely to its first positioned parent. seeks the nearest positioned parent and then behaves relative to that-->

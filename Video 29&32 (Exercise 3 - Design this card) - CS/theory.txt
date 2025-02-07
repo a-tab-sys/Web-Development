@@ -1,1 +1,0 @@
-make the card in the photo. card.png is a card that contains a card image. write html and css code to make this card. use any image, and estimate colors.

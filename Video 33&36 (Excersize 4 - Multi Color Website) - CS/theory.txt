@@ -1,2 +1,0 @@
-use cs variables
-to make a multi color nav bar
