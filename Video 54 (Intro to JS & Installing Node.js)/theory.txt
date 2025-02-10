@@ -1,0 +1,20 @@
+client > google > server
+
+we are the client > client says to google chrome-show me this ...website > chrome goes to the server and respinds back to google 
+
+you can insert js on front end 2 ways
+1. with the script tag within html body tag
+2. of make a .js file
+
+
+
+JS can be used for backend and front end. for backend you will need node.js as well. the js running on node.js and the js running on your browser are quite different. in browser you have some extra elelments you can use. similarly with node.js you have some functionalities that you would not have in browser like /reading/alter/printing file or folders.
+
+
+
+btw the terminal is vs code is the integrated terminal, that is what we will use below. to run a js file in terminal, navigate to the folder>right click>open in integrated terminal. then type node.<filename>.js
+
+the purpose of node.js is so you can run a js file the way you would with python or c++ for example. it broadens the scope js has. for example the script.js file could be ran in vs terminal if you typed node script.js. it wont work for that particular file we have made because the elements we used require a browser. it should work for the new.js file we made. so type node new.js in vs terminal to see console result
+
+
+SEMICOLON is opional is JS

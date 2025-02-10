@@ -1,0 +1,20 @@
+when creating a website, if you just start coding and developing the site and its features, the chances are your end pruduct will not up up looking very good. design and user interface are very important.
+
+deisgn is just as important as development
+
+before people whould convert psd (photoshop) design to html
+
+figma is a tool to work on and improve designs, you can makeiconns, logo, vectors, etc.
+
+you can also access free designs in the figma community and it helps with collaborative designing
+
+basically before you start designing in code, especially if you are making this site for somebody/client, you ant them to approve the deisgn before you spend so much time coding it. so first design on figma, once you like how it looks, replicate it with code. also its quite hard to design as you code because you dont always have an exact vision for what you want and it makes the coding process unnecessarily lengthy and difficut and here is lots of back and forth that can easily be avoided.
+
+you can export what you create and the community designs as an image .
+
+you can display your design on different frames like how it would look on a computer vs a phone.
+
+if you make a design (ex. a logo or a leaf or a button or some icon or anything) you can save it as a component so it saves as a whole to your assets and you can reuse it
+
+
+ALSO figma is a good place to get inspiration from the community. about what you want to make. if your making a food delivery site or a blog or something like this, you can search it on figma and get styling ideas from previously made templates. you can filter for the free templates
