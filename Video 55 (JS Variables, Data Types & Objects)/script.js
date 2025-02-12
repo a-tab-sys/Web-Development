@@ -61,7 +61,7 @@ console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r)
 let o = {
     name: "harry",
     "job code": "5600",//add "" to key because of space
-    "is_handsome":true
+    is_handsome:true
 }
 
 // to add to object
