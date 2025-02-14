@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">this is a box</div>
+    </div>
+    <script>
+        // open in browser> inspect> console
+        document.title="Harry is good"
+        console.log(document.title)
+        
+        //DOM - document object model - represents page content as html.
+        // document.body shows you the body of doc in console. in a tree like structure youcan view your entire html. page body as js object
+        console.log(document.body)  
+        document.body.style.backgroundColor="green"; //adds inline css
+
+        //BOM - browser object model represents additional obects provided by the browser (ost enviroment) for working with everythng except the document. the funcions alert/prompt/confirm are a part of bom
+
+
+    </script>
+</body>
+</html>

@@ -13,9 +13,6 @@ for (let i=0; i<100; i++){
 
 }
 
-
-
-
 //forin loop - used to iterate through an object - "key in object" so you see key, and knw your dealing with object
 let obj={
     name: "harry",
@@ -29,7 +26,6 @@ for (const key in obj){
     console.log(key)
     console.log(element)
 }
-
 
 // forof loop - used to iterate through strings - "iterator of object", so you see iterator, and know your dealing with arrays/strings
 for (const element of "harry") {
