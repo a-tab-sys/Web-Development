@@ -120,7 +120,7 @@ console.log(newarrayyy)
 
 
 
-//FILTER - 
+//FILTER - filter an array with values that passes a test. cretes a new array.
 // lets say that from newarrayyy we only want elements above 5
 
 //creating a function
@@ -151,3 +151,7 @@ const red=(a,b)=>{
 
 console.log(arr4.reduce(red))
 // first it will multiply 1 and 2 and get 2. then itll take 2*3=6. then 6*4=24. then 24*5=120. then 120*6=720.
+
+//ARRAY FROM - used to create an array from any other object
+
+Array.from ("Harry")    //used in excersize 11

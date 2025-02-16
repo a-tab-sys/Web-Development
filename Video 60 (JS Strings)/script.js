@@ -20,7 +20,7 @@ console.log("His name is " + name + " and his friends name is " + friend)
 console.log(`His name is ${name} and his friends name is ${friend}`)
 
 // template lieteral also lets you add double quotes or anything that would normally requires and escape sequence into your text without needing escape sequence characters
-friend2 = `roh"an`
+friend2 = `roh"an's`
 console.log(friend2)
 // friend3="roh"an"         //does not work
 // console.log(friend3)

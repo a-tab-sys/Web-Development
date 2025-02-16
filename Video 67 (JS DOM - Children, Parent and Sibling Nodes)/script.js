@@ -6,6 +6,9 @@ console.log(document.body)
 //BELOW WAS DONE IN INSPECT > CONSOLE
 
 
+//document.body is going into the page's html body tag
+//document.head is goinf into the page's  html head tag
+//document.documentElement is going into the page's html tag
 
 // SEE CHILD NODES
 document.body.childNodes
