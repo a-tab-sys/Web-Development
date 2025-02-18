@@ -39,9 +39,9 @@ cont.lastElementChild.style.backgroundColor="green";
 //see the parent node
 cont.lastElementChild.parentElement
 
-document.body.firstElementChild.childNodes      //you will see all child nodes, including comments and text nodes
+document.body.firstElementChild.childNodes      //childNodes: you will see all child nodes, including comments and text nodes
 
-document.body.firstElementChild.children  //you will see only the child nodes that are html elements
+document.body.firstElementChild.children  //children: you will see only the child nodes that are html elements
 
 document.body.firstElementChild.children[0]
 document.body.firstElementChild.children[1]

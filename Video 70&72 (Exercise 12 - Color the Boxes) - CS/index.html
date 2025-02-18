@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* we want add margin and padding, but remember when you use flex box you need to use gap property instead */
+            gap: 23px;
+        }
+
+        .box{
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- given 5 boxs, assign a random color and background to each box using dom concepts -->
+     <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+     </div>
+</body>
+</html>
