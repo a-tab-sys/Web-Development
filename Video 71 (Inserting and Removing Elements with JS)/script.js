@@ -29,7 +29,7 @@ console.log(document.querySelector(".container").nodeName)
 console.log("text content")
 console.log(document.querySelector(".container").textContent)
 
-//HIDDEN ELEMENTS
+//HIDDEN ELEMENTS - SEE HTML TO SEE HOW TO MAKE SOMETHING HIDDEN
 console.log("hidden element")
 
 //check if the element is hidden
@@ -40,7 +40,7 @@ console.log(boxes[1].hidden)
 console.log(boxes[2].hidden)
 
 //tohide some element
-document.querySelector(".container").hidden=true //adds hidden attribut into your container. inspect> element ans open containser-->you will see hidden attribute written there
+// document.querySelector(".container").hidden=true //adds hidden attribut into your container. inspect> element ans open containser-->you will see hidden attribute written there
 console.log(document.querySelector(".container").hidden)
 
 //-------ATTRIBUTE METHODS----------------
@@ -67,14 +67,37 @@ console.log(document.querySelector(".box").attributes)
 
 // if you go on any online website> go to inspect> console> type: document.designMode="on" > now you can edit anything on the website>the text an everything.
 
+// DATA ATRRITUBUTE - LETS YOU STORE ANY INFORMATION IN AN ELEMENT, FOR EXAMPLE WE ARE STORING WHO MADE THIS ELEMENT. you can store anything and change the createdby to something else. SEE IN HTML
+//TO VIEW IT
+console.log(document.querySelector(".box").dataset)
 
 
+//INSERTION METHODS FOR NODES
+let div = document.createElement("div");  //create a div
+div.innerHTML = "i have been inserted <b> by ammaarah </b>"
+div.setAttribute("class", "created");   //add attribute into the div
+document.querySelector(".container").append(div);        //insert it in the first element with class container
 
+//if youre getting data from somewhere and want it in your DOM without reloading the page its very useful
 
+//INSERT ADJACENT HTML / TEXT / ELEMENT
+let cont = document.querySelector(".container")
+cont.insertAdjacentHTML("afterend","<b> i am under the water, please help me </b>" )
 
-// continue at 9.5 minutes
+//NODE REMOVAL
+document.querySelector(".box").remove()
 
+//CLASS NAME AND CLASS LIST - will give you the classes associated to any class list or class name
+console.log (document.querySelector(".container").classList)        //display list of classes
+console.log (document.querySelector(".container").className)        //display names of classes
 
+document.querySelector(".container").classList.add("harry") //add classes
+document.querySelector(".container").classList.remove("bg-green")    //remove classes
 
+console.log (document.querySelector(".container").classList)
 
+//remove or add classes by toggling. toggle means if its on, turn it off. if its off, turn it on. you get output like true, flase, true, false .... if you had something like an animation saved in a class you could toggle it on and off throughout your program so pick when that animation plays
+console.log(document.querySelector(".container").classList.toggle("red"))
+console.log(document.querySelector(".container").classList.toggle("red"))
+console.log(document.querySelector(".container").classList.toggle("red"))
 

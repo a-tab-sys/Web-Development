@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+    <style>
+        .child {
+            background-color: whitesmoke;
+            border: 2px solid black;
+            margin: 14px;
+            padding: 14px;
+            cursor: pointer;
+        }
+
+        .childcontainer {
+            background-color: beige;
+            margin: 14px;
+            padding: 14px;
+
+        }
+
+        .container {
+            background-color: rgb(240, 240, 120);
+            margin: 14px;
+            padding: 14px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childcontainer">
+            <div class="child">
+                i am a child
+            </div>
+        </section>
+    </div>
+    <script>
+        // JS says if you clicked on child, then you automatically clicked on its parents-childcontainer and container. this is called eventbubbling. if you had events for the body or html then those would go off also. you can stop this by pasing in e and creating an even object, then adding e.stopPropogation(). this will stop event bubbling
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation()     //TO STOP EVENT BUBBLING YOU CAN STOP PROPOGATION
+            alert("child was clicked")
+        })
+
+        document.querySelector(".childcontainer").addEventListener("click", () => {
+            alert("childcontainer was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("container was clicked")
+        })
+
+        //SET INTERVAL
+        //makes something happen reptitively for a desited time. set interval is a function that takes a function. every 3 sec it will make background red of child container. you wont notice it change every 3 sec because you just keep chanign it to red, but if instead you had done background = getRandomColor() and linked to a getRandomColor function then you would see it cange color every 3 sec
+        // setInterval(() => {
+        //     document.querySelector(".childcontainer").style.background = "red"
+        // }, 3000);
+        
+        
+        //THERE IS ALSO CLEAR INTERVAL
+        // let a = setInterval(() => {
+        //     document.querySelector(".container").style.background = "green"
+        // }, 3000);
+        
+        //the console will give you a number, use the number it gives to clear interval . i got 3
+        // console.log(a)
+        // clearInterval(3)    //this would stop container from turning green. howver the number the console gives may change so this needs to be altered based on that. harry just typed this in the console
+
+
+        //SET TIMEOUT - THIS ONLY RUN ONCE AFTER THE TIME YOU SPECIFY, SET INTERVAL PERFORMS SOMETHING REPEATEDLY, SET TIMEOUT PERFORMS SOMETHING ONCE
+        let b = setTimeout(() => {
+            document.querySelector(".childcontainer").style.background = "green"
+        }, 3000);
+        console.log(b)
+
+        // YOU CAN ALSO CLEAR TIMEOUT, SAME WAY AS INTERVAL. HARRY TYPES IN CONSOLE AFTER GETTING THE READING FOR b
+        // clearTimeout(2)
+
+    </script>
+</body>
+
+</html>
