@@ -4,7 +4,23 @@
 //{}-to perform object desructuring
 //5 examples
 
-const { secureHeapUsed } = require("crypto");
+// -------------Harry Ex -------------------
+
+let x, y = [1, 5]
+console.log(x, y)   //this doesnt work
+
+let [q, z]=[1,5]
+console.log(q, z)   //this work
+
+//lets you pull out certain properties from an object
+//sometimes youll have a huge object but we only want a couple things from it, this lets us pull those out and save into variables
+let obj={
+    a1:1,
+    b1:2,
+    c1:3
+}
+let {a1, b1}=obj
+console.log(a1,b1)
 
 // -------------EX 1 -------------------
 // use destructuring to swap the value of 2 variables
@@ -45,7 +61,6 @@ console.log(secondColor)
 console.log(thirdColor)
 console.log(extraColors)
 
-
 //------------EX 4------------------------
 // use destructuring to extract values from objects
 
@@ -70,7 +85,6 @@ console.log(firstName)
 console.log(lastName)
 console.log(age)
 console.log(job)
-
 
 //------------EX 5------------------------
 // use destructuring to destructure in function parameters

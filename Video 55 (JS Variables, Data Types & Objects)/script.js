@@ -1,3 +1,5 @@
+const { partialDeepStrictEqual } = require("assert");
+
 console.log("this is tutorial 55 of web dev")
 
 // VARIABLES----------------------------------------
@@ -68,3 +70,12 @@ let o = {
 o.salary="4500crores";
 
 console.log(o)
+
+
+
+
+//variable scope 
+//let and  const have block level scope {}
+//var declared within js function become local to the function
+//var declared outside a function becomes global
+
