@@ -1,3 +1,5 @@
+//FUNCTION
+
 function nice(name) {
     console.log("hello " + name + " you are nice")
     console.log("hello " + name + " you are good")
