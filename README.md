@@ -26,3 +26,7 @@ The repository will be structured to reflect the various sections of the course:
 4. **React** *(coming soon)*: React-based projects and components.  
 5. **Backend** *(coming soon)*: Node.js and backend development concepts.  
 6. **Other Tools** *(coming soon)*: Tailwind CSS, Figma designs, and more.  
+<<<<<<< HEAD
+=======
+
+>>>>>>> 621d50fcc07275d611abfcb35f1906cd0f8b4cb5
