@@ -26,9 +26,3 @@ The repository will be structured to reflect the various sections of the course:
 4. **React** *(coming soon)*: React-based projects and components.  
 5. **Backend** *(coming soon)*: Node.js and backend development concepts.  
 6. **Other Tools** *(coming soon)*: Tailwind CSS, Figma designs, and more.  
-
-## Getting Started  
-To explore this repository:  
-1. Clone the repository using:  
-   ```bash
-   git clone https://github.com/your-username/Web-Development.git
