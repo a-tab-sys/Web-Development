@@ -1,0 +1,98 @@
+2 ways to make modules in node.js
+    1. ECMAScript ES6  -- more recent method
+    2. CommonJS -- older way to do it
+
+------------------------------------
+Setup
+1. in terminal type: 'npm init' or 'npm init -y' to skip the questions 
+
+2. We installed some modules/packages
+'npm i express jsonwebtoken dotenv'
+
+3. created a new file 'main.js' or 'server.js' or anything
+
+4. In terminal we will get the package nodemon globally, meaning for my whole computer, not just this one npm project (global). nodemon restarts my server everytime i make changes.
+npm install --global nodemon
+nodemon server.js
+
+
+
+
+-------------------------------------
+Code Explained
+
+const { createServer } = require('node:http');  
+
+    - require('node:http'): This is CommonJS module syntax used to import the built-in HTTP module in Node.js, which allows us to create a web server.
+    - const { createServer } = ...: This uses destructuring assignment, meaning it extracts only the createServer function from the http module and assigns it to a variable.
+        - Instead of writing const http = require('node:http'); and then using http.createServer(), we directly extract createServer.
+            - http would be a variable that holds the imported http module.
+            - The http module in Node.js is actually an object.
+            - Since http is an object, it can have properties and methods, such as:
+                http.createServer()
+                http.request()
+                http.get()
+
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+    - These lines declare constants (const means they cannot be reassigned).
+    - hostname: '127.0.0.1' is the loopback address, meaning the server runs only on the local machine.
+    - port: 3000 is the port number on which the server listens for requests
+
+const server = createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+    createServer(...)
+        This is a function provided by Node.js that creates an HTTP server.
+        It takes a callback function as an argument, which executes every time the server receives an HTTP request.
+    
+    Callback Function: (req, res) => { ... }
+        This is an arrow function, which is an alternative to function(req, res) { ... }.
+        It has two parameters:
+        req (request object): Contains details about the incoming request.
+        res (response object): Used to send a response back to the client.
+    
+    res.statusCode = 200;
+        This sets the HTTP response status code to 200, which means OK (successful response).
+        
+    res.setHeader('Content-Type', 'text/plain');
+        This sets an HTTP header in the response.
+        'Content-Type' tells the browser that the response contains plain text (instead of HTML, JSON, etc.).
+    
+    res.end('Hello World');
+        This ends the response and sends 'Hello World' to the client.
+        res.end() is required, or the client would keep waiting indefinitely.
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+    
+    server.listen(port, hostname, callback)
+        Starts the server and tells it to listen for incoming requests on the specified port and hostname.
+        When the server starts successfully, the provided callback function executes.
+    
+    Callback Function: () => { console.log(...) }
+        Uses template literals (backticks `...`) to insert variables (${hostname} and ${port}).
+        console.log(...) prints a message to indicate that the server is running.
+
+
+What This Code Does:
+1. Imports the HTTP module.
+2. Defines hostname (127.0.0.1) and port (3000).
+3. Creates an HTTP server that:
+    Responds with "Hello World" when accessed.
+    Sends a 200 OK response with text/plain content.
+4. Starts the server and logs a message when it's running.
+
+
+
+
+
+
+
+    

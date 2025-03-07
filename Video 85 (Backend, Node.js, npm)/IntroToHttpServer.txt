@@ -1,0 +1,44 @@
+What is an HTTP Server?
+An HTTP server is a software or hardware that processes HTTP (Hypertext Transfer Protocol) requests from clients (like web browsers) and sends back responses. It acts as a middleman between users and web applications.
+
+In simple terms, an HTTP server:
+
+Listens for incoming requests on a specific address (IP + port).
+Processes the request (e.g., fetching a webpage, sending data).
+Sends a response back to the client (e.g., an HTML page, JSON data, or plain text).
+
+------------------------------------
+An Example Node.js Application
+The most common example Hello World of Node.js is a web server:
+const { createServer } = require('node:http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+---------------------------------------
+What Are We Creating With This Code?
+With this Node.js code, we are creating a simple HTTP server that:
+
+Listens on localhost (127.0.0.1) at port 3000.
+Responds to any incoming request with:
+Status 200 OK.
+A "Hello World" text message.
+Does not handle specific routes (e.g., /home or /about), just sends the same response to all requests.
+
+---------------------------------------
+How This Fits into Web Development
+This is a basic server, but in a real-world application:
+
+It could serve HTML pages, images, or JSON data.
+It could handle user input and process forms.
+It could interact with databases to retrieve and store data.

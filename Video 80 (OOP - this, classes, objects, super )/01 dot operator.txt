@@ -1,0 +1,34 @@
+On What Type of Data Can We Use the Dot (.) Operator?
+The dot operator (.) is used to access properties and methods of objects in JavaScript. It can be used on:
+
+1. Objects
+
+Example
+const obj = { name: "Alice", greet: function() { return "Hello"; } };
+console.log(obj.name); // "Alice"
+console.log(obj.greet()); // "Hello"
+
+2. Classes and Instances
+
+Example
+class Car {
+  start() { console.log("Car started"); }
+}
+const myCar = new Car();
+myCar.start(); // "Car started"
+
+3. Modules (Imported Objects)
+
+Example
+const fs = require('fs'); 
+fs.readFileSync('file.txt', 'utf-8');
+
+4. Functions That Return Objects
+
+Example
+function getUser() {
+  return { name: "Alice", age: 25 };
+}
+console.log(getUser().name); // "Alice"
+
+
