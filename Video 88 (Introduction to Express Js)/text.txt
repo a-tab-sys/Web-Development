@@ -1,0 +1,25 @@
+in your terminal have to add npm i express@4 to install express version 4. need to do this for every project folder
+
+
+
+Why should we use express?
+    - express js is a web framework, designed specifically to make websites. http package has limited capabilities: cant serve static files, security needs to be implemented from the start, for handling get and post requests you will have to write custon code.
+
+Why do we use nodemon? 
+    - nodemon restarts the server evertime we make changes so we don have o do manually in terminal with node <file name>
+
+
+GO to express JS documentation to access starter code. https://expressjs.com/en/starter/hello-world.html
+Embedded below is essentially the simplest Express app you can create. It is a single file app: 
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})

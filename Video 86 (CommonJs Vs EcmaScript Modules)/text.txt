@@ -4,7 +4,7 @@
 
 ------------------------------------
 Setup
-1. in terminal type: 'npm init' or 'npm init -y' to skip the questions 
+1. once in your project folder, in terminal type: 'npm init' or 'npm init -y' to skip the questions 
 
 2. We installed some modules/packages
 'npm i express jsonwebtoken dotenv'
@@ -13,8 +13,12 @@ Setup
 
 4. In terminal we will get the package nodemon globally, meaning for my whole computer, not just this one npm project (global). nodemon restarts my server everytime i make changes.
 npm install --global nodemon
-nodemon server.js
 
+
+5. in your terminal have to add npm i express@4 to install express version 4. need to do this for every project folder
+
+6. to use in projects type in terminal:
+nodemon server.js
 
 
 

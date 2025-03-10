@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing post request</title>
+</head>
+<body>
+    <script>
+        // test post request
+        async function testPost(){
+            let a=await fetch("/", {method: "POST"})
+            let b = await a.text()
+            console.log(b)
+        }
+
+        // test put request
+        async function testPut(){
+            let a=await fetch("/", {method: "PUT"})
+            let b = await a.text()
+            console.log(b)
+        }
+        
+        //to confirm the put and post requests are working, you should see messages in terminal and in console of html page,
+        //
+        // testPost() 
+        testPut()
+    </script>
+</body>
+</html>

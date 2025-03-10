@@ -4,7 +4,7 @@ console.log("Hello World")
 
 // your backend server will not be visible to clients, this file is not visible to clients. this is where you will connect to databases, do passwork authentification.
 
-//if we want to create a backend that we want to maintain and work with long term, we will initialize it as an npm project so in terminal, in your folder type: npm init. it will ask you some questions in terminal:
+//if we want to create a backend that we want to maintain and work with long term, we will initialize it as an npm project so in terminal, in your folder type: npm init. (or npm init -y : to avoid all the questions)it will ask you some questions in terminal:
 // package name:    we will write "spotify" for example
 // version:         we will write "1.0.0"
 // description:     we will write "this is a spotify clone for my app"
