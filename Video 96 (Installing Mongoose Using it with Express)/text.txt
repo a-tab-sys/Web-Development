@@ -1,0 +1,1 @@
+Mongoose is a js library that makes validation easier.

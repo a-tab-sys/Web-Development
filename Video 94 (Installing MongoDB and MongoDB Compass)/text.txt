@@ -1,0 +1,36 @@
+mongodb is a database
+basically you have a backend and a front end, data you store will store in a database. (it is not effecient to make files in the backend for storage)
+
+mysql is also a database, it is a relational database.
+in a mysql database we have a table with rows and columns. there can be multiple tables and each datapoint within a table can refer to another datapoint in another table. relational databases can be ore complicated but are very effecient.
+
+MongoDB stores data the same way we write documents in JS.
+this keep development simple. we will store data just like be have an object in js
+
+in mongodb i created a new connection, this automatically connected to localhost:27017. this is mongodb default port. basically this mongodb im connecting to part of my local host. so on our computer mongodb is running and we are connecting to it using compass. we can also connect to our code, but for now we are choosing to connect with compass.
+
+localhost:27017 -> we are saying that the database instance installed in this computer is wht we want to connect to. SO WE ARE CONNECTED TO AN INSTALLED MONGODB INSTANCE - this measn the the database we make is in this mongodb instance. mongodb instance can be in a local host, or in some server. we can work in multiple instances. for instance if i made an e-commerce company, i can have one instnace, if i make a marketing agency i can have another instance and maybe it will have another server.
+
+using local host default is good for development, but in the future if we are working on something bigger and want to connect to a website or somehting, we can use mongodb on the cloud. so insead of our local host adddress we can put our mongodb instnace address and connect to that remote mongodb instance.
+
+aaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+so we created a database within our connection called sigma, this connection already had 3 default databases: admin, config and local. i created sigma and within that created a collection called courses. collections are folders and each collection can contain files.
+we opened the courses collection (folder) and hit the add data button and added a name, price and instructor, the _id was already there, because evertime you add data it has to have some id value.
+
+this data has been "persisted", this means that we have stored it here permanantly. 
+
+so what type of data doesnt persist?...imagine we opened alot of tabs in incognito mode, that data of what tabs you had open does not persist. we can put as much data here as we want to save it.
+
+- now we need some way to interact with mongodb through code.
+- Mongoshell helps us interact with mongodb with code
+- we want to create, trade, update and delete data in mongodb through coding... for this lets open MONGOSHELL.
+
+Mongoshell commands:
+show databases -> will show you all databases
+use sigma -> tells it to switch databases. this is kind of like cd'ing into sigma
+db.courses.find() -> it will serch the courses folder and show all documents in courses folder
+db.courses.insertOne({name: "Javascript"}) -> adds another document in the courses folder. you can also use this to create another folder and put data in that
+
+
+TO see your database in vs code here, go to the mongodb extension and connect to local host

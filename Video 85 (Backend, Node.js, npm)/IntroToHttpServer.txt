@@ -42,3 +42,6 @@ This is a basic server, but in a real-world application:
 It could serve HTML pages, images, or JSON data.
 It could handle user input and process forms.
 It could interact with databases to retrieve and store data.
+
+SEE DOCUMENTATION
+https://nodejs.org/en/learn/getting-started/introduction-to-nodejs

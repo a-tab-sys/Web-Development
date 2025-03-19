@@ -1,0 +1,1 @@
+you can either make a playground script with the help of the mongodb extension or if you make  a file of type .mongodb.js that file will work like a playground script.
